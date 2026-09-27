@@ -3,7 +3,7 @@
 const Laptops = () => {
     return (
         <div>
-            <h2>This is Laptop Component</h2>
+            <h2 className="flex items-center justify-center m-20 aura text-2xl font-bold">This is Laptop Component</h2>
             
         </div>
     );

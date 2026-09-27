@@ -31,7 +31,7 @@ const router = createBrowserRouter([{
 },
 {
   path: "/about",
-  element: <div>About</div>
+  element: <div className=' flex items-center m-20 justify-center-safe'><h1 className='bg-blue-500 text-2xl font-bold'>About</h1></div>
 }
 
 
