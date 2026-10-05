@@ -8,6 +8,16 @@
 .site-nav { display: flex; gap: 8px; color: #bfc2da; font-size: .9rem; }
 .site-nav a { padding: 8px 11px; border-radius: 9px; transition: color .2s, background .2s; }
 .site-nav a:hover, .site-nav a.active { color: white; background: rgba(255,255,255,.1); }
+.brand:focus-visible, .site-nav a:focus-visible, .cart-button:focus-visible {
+  outline: 2px solid #aef5ed; outline-offset: 3px;
+}
 .cart-button { display: flex; align-items: center; gap: 7px; padding: 8px 12px; border-radius: 10px; background: #f7f5ff; color: #19182e; font-weight: 750; font-size: .88rem; }
 .cart-button span { display: grid; place-items: center; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 99px; color: white; background: #665be8; font-size: .68rem; }
-@media (max-width: 700px) { .site-header { width: calc(100% - 20px); margin-top: 10px; padding: 10px; } .site-nav { overflow-x: auto; gap: 0; } .site-nav a { white-space: nowrap; padding: 7px; } .brand > span:last-child, .cart-button { display: none; } }
+@media (max-width: 700px) {
+  .site-header { width: calc(100% - 20px); margin-top: 10px; padding: 10px; }
+  .site-nav { overflow-x: auto; gap: 0; }
+  .site-nav a { white-space: nowrap; padding: 7px; }
+  .brand > span:last-child { display: none; }
+  .cart-button { flex-shrink: 0; padding: 8px; }
+  .cart-button span { min-width: 19px; height: 19px; }
+}
