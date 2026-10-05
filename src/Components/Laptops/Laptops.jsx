@@ -1,13 +1,5 @@
-// import React from 'react';
+import CollectionPage from '../CollectionPage/CollectionPage'
 
-const Laptops = () => {
-    return (
-        <div>
-    
-            <h2 className="flex items-center justify-center m-20 aura text-2xl font-bold">This is Laptop Component</h2>
-            
-        </div>
-    );
-};
-
-export default Laptops;
+export default function Laptops() {
+  return <CollectionPage category="laptop" title="Work with your whole mind." description="Focused machines with graceful power — ready for the midnight idea and the Monday meeting." />
+}
