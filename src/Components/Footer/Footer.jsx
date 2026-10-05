@@ -1,13 +1,11 @@
 
-const Footer = () => {
-    // import React from 'react';
-    return (
-        <footer className="fixed bottom-0 left-0 w-full bg-gray-900 text-gray-300">
-  <div className="max-w-7xl mx-auto px-4 py-6 text-center">
-    <p>&copy; 2026 BrandName. All rights reserved.</p>
-  </div>
-</footer>
-    );
-};
+import { NavLink } from 'react-router'
+import './Footer.css'
 
-export default Footer;
+export default function Footer() {
+  return <footer className="site-footer">
+    <div><NavLink className="footer-brand" to="/">LUMINA<span>✦</span></NavLink><p>Technology with a little more feeling.</p></div>
+    <div className="footer-links"><NavLink to="/mobiles">Mobiles</NavLink><NavLink to="/laptops">Laptops</NavLink><NavLink to="/users">Community</NavLink></div>
+    <p className="footer-note">© 2026 Lumina Studio<br />Made for everyday wonder.</p>
+  </footer>
+}
