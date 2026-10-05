@@ -1,0 +1,12 @@
+.product-card { min-width: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 22px; background: rgba(29, 32, 64, .75); transition: transform .25s ease, border-color .25s ease; }
+.product-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,.24); }
+.product-visual { height: 190px; position: relative; overflow: hidden; display: grid; place-items: center; isolation: isolate; }
+.product-orb { position: absolute; z-index: -1; width: 170px; height: 170px; border-radius: 50%; filter: blur(1px); opacity: .85; }
+.product-shape { font-size: 7rem; line-height: 1; color: rgba(255,255,255,.9); text-shadow: 0 10px 25px rgba(20,18,48,.35); transform: rotate(-12deg); }
+.tone-violet .product-visual { background: linear-gradient(140deg,#6d5fd4,#b094ff); }.tone-violet .product-orb { background:#ffcbff; }
+.tone-blue .product-visual { background: linear-gradient(140deg,#2c70a8,#86d3f5); }.tone-blue .product-orb { background:#e1fbff; }
+.tone-coral .product-visual { background: linear-gradient(140deg,#d75e74,#f3a67a); }.tone-coral .product-orb { background:#ffedbb; }
+.tone-mint .product-visual { background: linear-gradient(140deg,#3d9d90,#9be4ca); }.tone-mint .product-orb { background:#ebfff4; }
+.tone-amber .product-visual { background: linear-gradient(140deg,#ae732c,#e9c56b); }.tone-amber .product-orb { background:#fff1b2; }
+.tone-pink .product-visual { background: linear-gradient(140deg,#ba548c,#eb9bca); }.tone-pink .product-orb { background:#fff1fa; }
+.product-body { padding: 18px; }.product-badge { color:#bfc7ff; font-size:.75rem; font-weight:700; }.product-title { display:flex; justify-content:space-between; gap:8px; margin:7px 0 16px; }.product-title h3 { margin:0; font-size:1.05rem; letter-spacing:-.025em; }.product-title p { margin:5px 0 0; color:#bfc2d5; font-size:.78rem; }.product-title strong { font-size:.9rem; white-space:nowrap; }.product-actions { display:flex; justify-content:space-between; align-items:center; }.text-action { padding:0; color:#c9c7de; border:0; background:transparent; font-size:.84rem; }.text-action:hover { color:white; }.add-button { padding:8px 10px; border:0; border-radius:9px; color:#24213c; background:#e8e7ff; font-weight:800; font-size:.78rem; }.add-button span { margin-left:5px; font-size:1rem; }
