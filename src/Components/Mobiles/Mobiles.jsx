@@ -1,11 +1,5 @@
-// import React from 'react';
+import CollectionPage from '../CollectionPage/CollectionPage'
 
-const Mobile = () => {
-    return (
-        <div>
-            <h2 className="flex items-center justify-center m-20 aura text-2xl font-bold">This is Mobile</h2>
-        </div>
-    );
-};
-
-export default Mobile;
+export default function Mobiles() {
+  return <CollectionPage category="mobile" title="Pocket-sized possibility." description="Cameras, colors and capable little companions that keep your whole day in your hand." />
+}

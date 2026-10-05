@@ -1,20 +1,30 @@
-// import React from 'react';
+import { NavLink } from 'react-router'
+import { useCart } from '../../hooks/useCart'
+import './Header.css'
 
-import {  NavLink } from "react-router";
-// import './Root/root'
-import '../Root/Root.css'
-const Header = () => {
-    return (
-        <nav className="bg-gray-800 text-white p-4 flex justify-center space-x-4">
-    
-            <NavLink  to="/">Home</NavLink>
-            <NavLink  to="/mobiles">Mobiles</NavLink>
-            <NavLink  to="/laptops">Laptops</NavLink>
-            <NavLink  to="/about">About</NavLink>
-            <NavLink  to="/users">Users</NavLink>
+const links = [
+  { to: '/', label: 'Discover', end: true },
+  { to: '/mobiles', label: 'Mobiles' },
+  { to: '/laptops', label: 'Laptops' },
+  { to: '/users', label: 'Community' },
+  { to: '/about', label: 'Our story' },
+]
 
-    </nav>
-    );
-};
+export default function Header() {
+  const { count } = useCart()
 
-export default Header;
+  return (
+    <header className="site-header">
+      <NavLink className="brand" to="/" aria-label="Lumina home">
+        <span className="brand-mark">L</span>
+        <span>Lumina</span>
+      </NavLink>
+      <nav className="site-nav" aria-label="Main navigation">
+        {links.map(({ to, label, end }) => <NavLink key={to} to={to} end={end}>{label}</NavLink>)}
+      </nav>
+      <a className="cart-button" href="#collection" aria-label={`${count} items in cart`}>
+        Bag <span>{count}</span>
+      </a>
+    </header>
+  )
+}

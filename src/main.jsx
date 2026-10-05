@@ -10,6 +10,9 @@ import Home from './Components/Home/Home.jsx';
 import Mobiles from './Components/Mobiles/Mobiles.jsx';
 import Laptops from './Components/Laptops/Laptops.jsx';
 import Users from './Components/Users/Users.jsx';
+import About from './Components/About/About.jsx';
+import NotFound from './Components/NotFound/NotFound.jsx';
+import { CartProvider } from './context/CartContext.jsx';
 const router = createBrowserRouter([{
   path: "/",
   Component: Root,
@@ -28,15 +31,16 @@ const router = createBrowserRouter([{
       Component: Laptops
     },
     {
-  path: "/about",
-  element: <div className=' flex items-center m-20 justify-center-safe'><h1 className='bg-blue-500 text-2xl font-bold'>About</h1></div>
+  path: "about",
+  Component: About,
 },
 {
   path: "/users",
   loader: async () => await fetch('https://jsonplaceholder.typicode.com/users'),
   Component: Users
 }
-
+,
+{ path: "*", Component: NotFound }
   ]
 
 }
@@ -46,6 +50,6 @@ const router = createBrowserRouter([{
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider><RouterProvider router={router} /></CartProvider>
   </StrictMode>,
 )
