@@ -1,6 +1,5 @@
-import { createContext, useMemo, useState } from 'react'
-
-const CartContext = createContext(null)
+import { useMemo, useState } from 'react'
+import { CartContext } from './CartStore'
 
 export function CartProvider({ children }) {
   const [items, setItems] = useState([])
@@ -23,4 +22,3 @@ export function CartProvider({ children }) {
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }
 
-export { CartContext }
