@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useMemo, useState } from 'react'
 
 const CartContext = createContext(null)
 
@@ -23,4 +23,4 @@ export function CartProvider({ children }) {
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }
 
-export const useCart = () => useContext(CartContext)
+export { CartContext }

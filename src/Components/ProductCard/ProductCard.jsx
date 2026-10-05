@@ -1,5 +1,5 @@
 import { formatPrice } from '../../data/catalog'
-import { useCart } from '../../context/CartContext'
+import { useCart } from '../../hooks/useCart'
 import './ProductCard.css'
 
 export default function ProductCard({ product, onPreview }) {

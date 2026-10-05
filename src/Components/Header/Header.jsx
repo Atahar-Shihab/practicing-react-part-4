@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router'
-import { useCart } from '../../context/CartContext'
+import { useCart } from '../../hooks/useCart'
 import './Header.css'
 
 const links = [
